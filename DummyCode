@@ -1,0 +1,6 @@
+from pyspark.sql.types import *
+import pyspark.sql.functions as f
+
+m_df = table("dev_scene.proxy_promotion")
+
+display(m_df.where(f.col("startdate") >= '2019-01-01'))
